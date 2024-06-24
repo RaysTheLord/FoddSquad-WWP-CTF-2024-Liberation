@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=76;
+		nextID=84;
 	};
 	class Camera
 	{
@@ -334,7 +334,7 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2038;
+		year=1987;
 		month=6;
 		day=6;
 		hour=8;
@@ -8285,6 +8285,7 @@ class Mission
 						angles[]={0.035185181,5.9998083,0.065506957};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						skill=0.2;
@@ -8292,7 +8293,7 @@ class Mission
 					};
 					id=651;
 					type="Land_BottlePlastic_V2_F";
-					atlOffset=0.13259888;
+					atlOffset=-0.00042724609;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8320,6 +8321,7 @@ class Mission
 						angles[]={0.035185181,4.6383638,0.065506957};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						skill=0.2;
@@ -8327,7 +8329,7 @@ class Mission
 					};
 					id=652;
 					type="Land_BottlePlastic_V2_F";
-					atlOffset=0.13259888;
+					atlOffset=-0.00045776367;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8355,6 +8357,7 @@ class Mission
 						angles[]={0.035185181,5.9998083,0.065506957};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						skill=0.2;
@@ -8362,7 +8365,7 @@ class Mission
 					};
 					id=653;
 					type="Land_BottlePlastic_V2_F";
-					atlOffset=0.13259888;
+					atlOffset=-0.00039672852;
 					class CustomAttributes
 					{
 						class Attribute0
