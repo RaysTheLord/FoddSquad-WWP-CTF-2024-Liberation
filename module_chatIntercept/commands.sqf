@@ -105,7 +105,7 @@ pvpfw_chatIntercept_allCommands = [
                     _end_time = time + _this;
                     while { time < _end_time } do {
                         {
-                            [paramedic, _x] remoteExecCall ["ace_medical_treatment_fnc_fullHeal", 0];
+                            [_x, _x] remoteExecCall ["ace_medical_treatment_fnc_fullHeal", 0];
                         } forEach allPlayers;
                         sleep 0.5;
                     };
