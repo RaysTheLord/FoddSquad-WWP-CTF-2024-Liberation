@@ -1,28 +1,43 @@
 /*
     Needed Mods:
-    - None
+    - CUP Weapons
+    - CUP Vehicles
+    - CUP Units
 
     Optional Mods:
-    - None
+    - Project Infinite AIO
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
 Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
 KP_liberation_guerilla_units = [
-    "I_G_Soldier_AR_F",
-    "I_G_engineer_F",
-    "I_G_officer_F",
-    "I_G_medic_F",
-    "I_G_Soldier_F",
-    "I_G_Soldier_LAT_F",
-    "I_G_Soldier_M_F",
-    "I_G_Soldier_SL_F"
+    "CUP_I_TK_GUE_Soldier_MG",
+    "CUP_I_TK_GUE_Mechanic",
+    "CUP_I_TK_GUE_Commander",
+    "CUP_I_TK_GUE_Guerilla_Medic",
+    "CUP_I_TK_GUE_Soldier",
+    "CUP_I_TK_GUE_Soldier_AT",
+    "CUP_I_TK_GUE_Sniper",
+    "CUP_I_TK_GUE_Soldier_TL"
 ];
 
 // Armed vehicles
 KP_liberation_guerilla_vehicles = [
-    "I_G_Offroad_01_armed_F",
-    "I_G_Offroad_01_AT_F"
+    "CUP_I_Datsun_PK_TK",
+    "CUP_I_Hilux_AGS30_TK",
+    "CUP_I_Hilux_DSHKM_TK",
+    "CUP_I_Hilux_M2_TK",
+    "CUP_I_Hilux_SPG9_TK",
+    "CUP_I_Hilux_armored_BMP1_TK",
+    "CUP_I_Hilux_armored_BTR60_TK",
+    "CUP_I_Hilux_armored_zu23_TK",
+    "CUP_I_BTR40_MG_TKG",
+    "CUP_I_BTR40_MG_TKG",
+    "CUP_I_BMP1_TK_GUE",
+    "CUP_I_BRDM2_TK_GUE",
+    "CUP_I_T34_TK_GUE",
+    "CUP_I_T55_TK_GUE",
+    "CUP_I_Datsun_PK_TK_Random"
 ];
 
 /* Guerilla Equipment
@@ -32,58 +47,61 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
 KP_liberation_guerilla_weapons_1 = [
-    ["arifle_AKM_F","30Rnd_762x39_Mag_F",4,"",""],
-    ["arifle_AKS_F","30Rnd_545x39_Mag_F",4,"",""],
-    ["hgun_PDW2000_F","30Rnd_9x21_Mag",4,"",""],
-    ["SMG_01_F","30Rnd_45ACP_Mag_SMG_01",4,"",""],
-    ["SMG_02_F","30Rnd_9x21_Mag_SMG_02",4,"",""],
-    ["SMG_05_F","30Rnd_9x21_Mag_SMG_02",4,"",""]
+    ["bnae_mk1_virtual","10Rnd_303_Magazine",8,"",""],
+    ["bnae_mk1_t_virtual","10Rnd_303_Magazine",8,"bnae_scope_v3_virtual",""],
+    ["bnae_m97_virtual","6Rnd_Slug_Magazine",10,"",""],
+    ["bnae_spr220_virtual","2Rnd_Slug_Magazine",20,"",""],
+    ["bnae_spr220_so_virtual","2Rnd_Slug_Magazine",20,"",""],
+    ["CUP_srifle_LeeEnfield","CUP_10x_303_M",8,"",""],
+    ["CUP_srifle_LeeEnfield_rail","CUP_10x_303_M",8,"cup_optic_leupoldmk4",""],
+    ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"",""]
 ];
 
 KP_liberation_guerilla_weapons_2 = [
-    ["arifle_Katiba_F","30Rnd_65x39_caseless_green",4,"optic_ACO_grn",""],
-    ["arifle_Mk20_plain_F","30Rnd_556x45_Stanag",4,"optic_ACO_grn",""],
-    ["arifle_TRG21_F","30Rnd_556x45_Stanag",4,"optic_ACO_grn",""],
-    ["arifle_CTAR_blk_F","30Rnd_580x42_Mag_F",4,"optic_ACO_grn",""],
-    ["arifle_MX_SW_F","100Rnd_65x39_caseless_mag",3,"optic_ACO_grn","bipod_01_F_blk"],
-    ["srifle_DMR_06_olive_F","20Rnd_762x51_Mag",5,"optic_Hamr","bipod_01_F_blk"]
+    ["bnae_mk1_t_virtual","10Rnd_303_Magazine",8,"bnae_scope_v3_virtual",""],
+    ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"",""],
+    ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"cup_optic_kobra",""],
+    ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"cup_optic_pso_1",""],
+    ["CUP_arifle_Sa58V_camo","CUP_30Rnd_Sa58_M_TracerG",6,"",""],
+    ["CUP_arifle_RPK74","CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M",3,"",""]
 ];
 
 KP_liberation_guerilla_weapons_3 = [
-    ["arifle_CTAR_blk_F","30Rnd_580x42_Mag_F",4,"optic_MRCO",""],
-    ["arifle_SPAR_01_blk_F","30Rnd_556x45_Stanag",4,"optic_MRCO",""],
-    ["arifle_SPAR_03_blk_F","20Rnd_762x51_Mag",5,"optic_MRCO",""],
-    ["arifle_ARX_blk_F","30Rnd_65x39_caseless_green",4,"optic_MRCO",""],
-    ["srifle_DMR_03_F","20Rnd_762x51_Mag",5,"optic_MRCO",""],
-    ["srifle_EBR_F","20Rnd_762x51_Mag",5,"optic_MRCO",""],
-    ["srifle_DMR_07_blk_F","20Rnd_650x39_Cased_Mag_F",5,"optic_DMS",""],
-    ["LMG_Mk200_F","200Rnd_65x39_cased_Box",2,"optic_MRCO","bipod_01_F_blk"]
+    ["CUP_arifle_FNFAL","CUP_20Rnd_762x51_FNFAL_M",5,"",""],
+    ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"",""],
+    ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"cup_optic_kobra",""],
+    ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"cup_optic_pso_1",""],
+    ["CUP_srifle_SVD","CUP_10Rnd_762x54_SVD_M",10,"cup_optic_pso_3",""],
+    ["CUP_lmg_PKM","CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M",2,"",""],
+    ["CUP_arifle_FNFAL_railed","CUP_20Rnd_762x51_FNFAL_M",5,"cup_optic_leupold_vx3",""],
+    ["CUP_arifle_FNFAL","CUP_20Rnd_762x51_FNFAL_M",5,"",""]
 ];
 
 // Uniforms
 KP_liberation_guerilla_uniforms_1 = [
-    "U_C_Poloshirt_blue",
-    "U_C_Poloshirt_burgundy",
-    "U_C_Poloshirt_salmon",
-    "U_C_Poloshirt_redwhite",
-    "U_C_Poloshirt_stripped",
-    "U_C_Poloshirt_tricolour",
-    "U_C_Poor_1",
-    "U_C_Man_casual_1_F",
-    "U_C_Man_casual_2_F",
-    "U_C_Man_casual_3_F",
-    "U_C_Man_casual_4_F",
-    "U_C_Man_casual_5_F",
-    "U_C_Man_casual_6_F",
-    "U_Marshal"
+    "CUP_O_TKI_Khet_Jeans_04",
+    "CUP_O_TKI_Khet_Jeans_03",
+    "CUP_O_TKI_Khet_Jeans_02",
+    "CUP_O_TKI_Khet_Jeans_01",
+    "CUP_O_TKI_Khet_Jeans_01",
+    "CUP_O_TKI_Khet_Partug_02",
+    "CUP_O_TKI_Khet_Partug_03",
+    "CUP_O_TKI_Khet_Partug_04",
+    "CUP_O_TKI_Khet_Partug_05",
+    "CUP_O_TKI_Khet_Partug_06",
+    "CUP_O_TKI_Khet_Partug_07",
+    "CUP_O_TKI_Khet_Partug_08",
+    "CUP_O_TKI_Khet_Partug_08",
+    "U_BG_Guerilla3_1"
+
 ];
 
 KP_liberation_guerilla_uniforms_2 = [
-    "U_I_C_Soldier_Bandit_1_F",
-    "U_I_C_Soldier_Bandit_2_F",
-    "U_I_C_Soldier_Bandit_3_F",
-    "U_I_C_Soldier_Bandit_4_F",
-    "U_I_C_Soldier_Bandit_5_F",
+    "U_BG_Guerilla2_3",
+    "U_BG_Guerilla2_1",
+    "U_BG_Guerilla2_1",
+    "U_BG_Guerrilla_6_1",
+    "CUP_U_C_Citizen_03",
     "U_BG_Guerilla2_1",
     "U_BG_Guerilla2_2",
     "U_BG_Guerilla2_3",
@@ -119,7 +137,23 @@ KP_liberation_guerilla_vests_1 = [
     "V_BandollierB_khk",
     "V_BandollierB_oli",
     "V_BandollierB_blk",
-    "V_BandollierB_ghex_F"
+    "V_BandollierB_ghex_F",
+    "CUP_V_RUS_Smersh_1",
+    "CUP_V_RUS_Smersh_2",
+    "CUP_V_O_TK_CrewBelt",
+    "CUP_V_OI_TKI_Jacket1_04",
+    "CUP_V_OI_TKI_Jacket1_06",
+    "CUP_V_OI_TKI_Jacket1_01",
+    "CUP_V_OI_TKI_Jacket1_05",
+    "CUP_V_OI_TKI_Jacket1_02",
+    "CUP_V_OI_TKI_Jacket1_03",
+    "CUP_V_OI_TKI_Jacket4_04",
+    "CUP_V_OI_TKI_Jacket4_05",
+    "CUP_V_OI_TKI_Jacket4_02",
+    "CUP_V_OI_TKI_Jacket4_06",
+    "CUP_V_OI_TKI_Jacket4_03",
+    "CUP_V_OI_TKI_Jacket4_01",
+    "CUP_V_OI_TKI_Jacket5_04"
 ];
 
 KP_liberation_guerilla_vests_2 = [
@@ -132,6 +166,8 @@ KP_liberation_guerilla_vests_2 = [
     "V_HarnessO_ghex_F",
     "V_HarnessOGL_brn",
     "V_HarnessOGL_gry",
+    "CUP_V_CDF_6B3_4_Green",
+    "CUP_V_CDF_6B3_4_DST",
     "V_HarnessOGL_ghex_F"
 ];
 
@@ -142,6 +178,11 @@ KP_liberation_guerilla_vests_3 = [
     "V_TacVest_blk",
     "V_I_G_resistanceLeader_F",
     "V_TacVest_camo",
+    "CUP_V_O_Ins_Carrier_Rig_Com",
+    "CUP_V_O_Ins_Carrier_Rig_Light",
+    "CUP_V_O_Ins_Carrier_Rig_MG",
+    "CUP_V_CDF_6B3_4_Green",
+    "CUP_V_CDF_6B3_4_DST",
     "V_TacChestrig_grn_F",
     "V_TacChestrig_cbr_F",
     "V_TacChestrig_oli_F"
@@ -149,59 +190,105 @@ KP_liberation_guerilla_vests_3 = [
 
 // Headgear
 KP_liberation_guerilla_headgear_1 = [
-    "",
-    "",
-    "",
-    "",
-    "H_Hat_brown",
-    "H_Hat_grey",
-    "H_Hat_tan",
-    "H_Hat_checker",
-    "H_Hat_camo",
-    "H_Bandanna_surfer",
-    "H_Bandanna_surfer_grn",
-    "H_Bandanna_surfer_blk",
-    "H_Hat_Safari_olive_F",
-    "H_Hat_Safari_sand_F",
-    "H_Construction_basic_black_F",
-    "H_Helmet_Skate",
-    "H_Cap_blu",
-    "H_Cap_grn",
-    "H_Cap_tan",
-    "H_Cap_oli",
-    "H_Cap_red",
-    "H_Cap_blk"
+    "CUP_H_TKI_Lungee_Open_01",
+    "CUP_H_TK_Lungee",
+    "CUP_H_TKI_Lungee_Open_02",
+    "CUP_H_TKI_Lungee_Open_03",
+    "CUP_H_TKI_Lungee_Open_04",
+    "CUP_H_TKI_Lungee_Open_05",
+    "CUP_H_TKI_Lungee_Open_06",
+    "CUP_H_TKI_Lungee_01",
+    "CUP_H_TKI_Lungee_02",
+    "CUP_H_TKI_Lungee_03",
+    "CUP_H_TKI_Lungee_04",
+    "CUP_H_TKI_Lungee_05",
+    "CUP_H_TKI_Lungee_06",
+    "CUP_H_TKI_Pakol_1_01",
+    "CUP_H_TKI_Pakol_2_04",
+    "CUP_H_TKI_Pakol_2_05",
+    "CUP_H_TKI_Pakol_2_06",
+    "CUP_H_TKI_Pakol_1_02",
+    "CUP_H_TKI_Pakol_1_03",
+    "CUP_H_TKI_Pakol_1_04",
+    "CUP_H_TKI_Pakol_1_05",
+    "CUP_H_TKI_Pakol_1_06",
+    "CUP_H_TKI_Pakol_2_01",
+    "CUP_H_TKI_Pakol_2_02",
+    "CUP_H_TKI_Pakol_2_03",
+    "CUP_H_TKI_SkullCap_01",
+    "CUP_H_TKI_SkullCap_02",
+    "CUP_H_TKI_SkullCap_03",
+    "CUP_H_TKI_SkullCap_04",
+    "CUP_H_TKI_SkullCap_05",
+    "CUP_H_TKI_SkullCap_06"
 ];
 
 KP_liberation_guerilla_headgear_2 = [
-    "H_Bandanna_blu",
-    "H_Bandanna_sand",
-    "H_Bandanna_gry",
-    "H_Bandanna_camo",
-    "H_Bandanna_cbr",
-    "H_Bandanna_sgg",
-    "H_Bandanna_khk",
-    "H_Cap_blu",
-    "H_Cap_grn",
-    "H_Cap_tan",
-    "H_Cap_oli",
-    "H_Cap_red",
-    "H_Cap_blk",
-    "H_Cap_blk_Raven",
-    "H_MilCap_dgtl"
+    "CUP_H_TKI_Lungee_Open_01",
+    "CUP_H_TK_Lungee",
+    "CUP_H_TKI_Lungee_Open_02",
+    "CUP_H_TKI_Lungee_Open_03",
+    "CUP_H_TKI_Lungee_Open_04",
+    "CUP_H_TKI_Lungee_Open_05",
+    "CUP_H_TKI_Lungee_Open_06",
+    "CUP_H_TKI_Lungee_01",
+    "CUP_H_TKI_Lungee_02",
+    "CUP_H_TKI_Lungee_03",
+    "CUP_H_TKI_Lungee_04",
+    "CUP_H_TKI_Lungee_05",
+    "CUP_H_TKI_Lungee_06",
+    "CUP_H_TKI_Pakol_1_01",
+    "CUP_H_TKI_Pakol_2_04",
+    "CUP_H_TKI_Pakol_2_05",
+    "CUP_H_TKI_Pakol_2_06",
+    "CUP_H_TKI_Pakol_1_02",
+    "CUP_H_TKI_Pakol_1_03",
+    "CUP_H_TKI_Pakol_1_04",
+    "CUP_H_TKI_Pakol_1_05",
+    "CUP_H_TKI_Pakol_1_06",
+    "CUP_H_TKI_Pakol_2_01",
+    "CUP_H_TKI_Pakol_2_02",
+    "CUP_H_TKI_Pakol_2_03",
+    "CUP_H_TKI_SkullCap_01",
+    "CUP_H_TKI_SkullCap_02",
+    "CUP_H_TKI_SkullCap_03",
+    "CUP_H_TKI_SkullCap_04",
+    "CUP_H_TKI_SkullCap_05",
+    "CUP_H_TKI_SkullCap_06"
 ];
 
 KP_liberation_guerilla_headgear_3 = [
-    "H_ShemagOpen_khk",
-    "H_ShemagOpen_tan",
-    "H_Shemag_olive",
-    "H_Booniehat_khk",
-    "H_Booniehat_oli",
-    "H_Booniehat_tan",
-    "H_Booniehat_dgtl",
-    "H_Booniehat_tna_F",
-    "H_PASGT_basic_olive_F",
-    "H_PASGT_basic_white_F"
+    "CUP_H_TKI_Lungee_Open_01",
+    "CUP_H_TK_Lungee",
+    "CUP_H_TKI_Lungee_Open_02",
+    "CUP_H_TKI_Lungee_Open_03",
+    "CUP_H_TKI_Lungee_Open_04",
+    "CUP_H_TKI_Lungee_Open_05",
+    "CUP_H_TKI_Lungee_Open_06",
+    "CUP_H_TKI_Lungee_01",
+    "CUP_H_TKI_Lungee_02",
+    "CUP_H_TKI_Lungee_03",
+    "CUP_H_TKI_Lungee_04",
+    "CUP_H_TKI_Lungee_05",
+    "CUP_H_TKI_Lungee_06",
+    "CUP_H_TKI_Pakol_1_01",
+    "CUP_H_TKI_Pakol_2_04",
+    "CUP_H_TKI_Pakol_2_05",
+    "CUP_H_TKI_Pakol_2_06",
+    "CUP_H_TKI_Pakol_1_02",
+    "CUP_H_TKI_Pakol_1_03",
+    "CUP_H_TKI_Pakol_1_04",
+    "CUP_H_TKI_Pakol_1_05",
+    "CUP_H_TKI_Pakol_1_06",
+    "CUP_H_TKI_Pakol_2_01",
+    "CUP_H_TKI_Pakol_2_02",
+    "CUP_H_TKI_Pakol_2_03",
+    "CUP_H_TKI_SkullCap_01",
+    "CUP_H_TKI_SkullCap_02",
+    "CUP_H_TKI_SkullCap_03",
+    "CUP_H_TKI_SkullCap_04",
+    "CUP_H_TKI_SkullCap_05",
+    "CUP_H_TKI_SkullCap_06"
 ];
 
 // Facegear. Applies for tier 2 and 3.
