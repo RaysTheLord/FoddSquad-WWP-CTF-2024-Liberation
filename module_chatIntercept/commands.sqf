@@ -19,23 +19,14 @@ pvpfw_chatIntercept_allCommands = [
                 //Invalid
                 systemChat "Invalid donation amount.";
             };
-            if (_amnt >= 1 && _amnt <= 5) then {
-                //Ammo Supply Drop
-                _mag_types = [];
-                {
-                    _mag_types pushBack (currentMagazine _x);
-                } forEach allPlayers;
-                
-                _pos = getPos player;
-                _holder = createvehicle ["CargoNet_01_box_F", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
-                [objNull, _holder] call BIS_fnc_curatorobjectedited;
-                
-                {
-                    _holder addItemCargoGlobal [_x, _amnt];
-                } forEach _mag_types;
-                systemChat "Ammo crate dropped.";
+            if (_amnt >= 1 && _amnt <= 10) then {
+                _resources = _amnt * 100;
+                [KP_liberation_supply_crate, _resources] call KPLIB_fnc_createCrate;
+                [KP_liberation_ammo_crate, _resources] call KPLIB_fnc_createCrate;
+                [KP_liberation_fuel_crate, _resources] call KPLIB_fnc_createCrate;
+                systemChat "Supply, ammo, and fuel dropped.";
             };
-            if (_amnt >= 6 && _amnt <= 10) then {
+            if (_amnt > 10 && _amnt < 15) then {
                 //Medical Supply Drop
                 _pos = getPos player;
                 _holder = createvehicle ["CargoNet_01_box_F", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
@@ -48,7 +39,7 @@ pvpfw_chatIntercept_allCommands = [
                 _holder addItemCargoGlobal ["ACE_personalAidKit", 4];
                 systemChat "Medical crate dropped.";
             };
-            if (_amnt >= 11 && _amnt <= 19) then {
+            if (_amnt >= 15 && _amnt < 30) then {
                 //APC Drop
                 _pos = getPos player;
                 _holder = createvehicle ["CFP_B_USARMY_1991_M113A3_Des_01", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
@@ -56,16 +47,7 @@ pvpfw_chatIntercept_allCommands = [
                 
                 systemChat "APC dropped.";            
             };
-            if (_amnt >= 20 && _amnt <= 29) then {
-                //Artillery Drop
-                _pos = getPos player;
-                _holder = createvehicle ["CFP_B_USARMY_1991_M270_MLRS_HE_Des_01", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
-                [objNull, _holder] call BIS_fnc_curatorobjectedited;
-                
-                systemChat "Artillery Vehicle dropped.";
-            };
-            
-            if (_amnt >= 30 && _amnt <= 39) then {
+            if (_amnt >= 30 && _amnt < 40) then {
                 //Tank Drop
                 _pos = getPos player;
                 _holder = createvehicle ["CFP_B_USARMY_1991_M1A1_Abrams_Des_01", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
@@ -74,31 +56,34 @@ pvpfw_chatIntercept_allCommands = [
                 systemChat "Tank dropped.";
             };
             
-            if (_amnt >= 40 && _amnt <= 49) then {
-                //Blackhawk Drop
+            if (_amnt >= 40 && _amnt < 50) then {
+                //Artillery Drop
                 _pos = getPos player;
-                _holder = createvehicle ["CFP_B_USARMY_1991_UH_60M_Des_01", [_pos select 0, _pos select 1, 0], [], 0, "CAN_COLLIDE"];
-                player moveInDriver _holder;
+                _holder = createvehicle ["CFP_B_USARMY_1991_M270_MLRS_HE_Des_01", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
+                [objNull, _holder] call BIS_fnc_curatorobjectedited;
                 
-                systemChat "Blackhawk spawned.";
+                systemChat "Artillery Vehicle dropped.";
+
             };
             
-            if (_amnt >= 50 && _amnt <= 75) then {
+            if (_amnt >= 50 && _amnt < 76) then {
                 //Apache Attack Helicopter Drop
                 _pos = getPos player;
                 _holder = createvehicle ["CFP_B_USARMY_1991_AH_64D_Des_01", [_pos select 0, _pos select 1, 0], [], 0, "CAN_COLLIDE"];
                 player moveInDriver _holder;
                 
                 systemChat "Apache spawned.";
+
             };
-            if (_amnt >= 76 && _amnt <= 100) then {
+            
+            if (_amnt >= 76 && _amnt < 100) then {
                 //Heal players
                 {
                     [_x, _x] remoteExecCall ["ace_medical_treatment_fnc_fullHeal", 0];
                 } forEach allPlayers;
                 systemChat "Healing all players.";
             };
-            if (_amnt >= 101) then {
+            if (_amnt >= 100) then {
                 //Wolverine mode
                 _wolv_time = 60 + (60 * (floor((_amnt - 100) / 50)));
                 _wolv_time spawn {

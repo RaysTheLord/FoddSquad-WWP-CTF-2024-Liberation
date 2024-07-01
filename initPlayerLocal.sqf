@@ -1,5 +1,5 @@
 //Chat command init
-_access_allowed = ["UselessFodder"];
+_access_allowed = ["UselessFodder", "Ray"];
 if ((name player) in _access_allowed || (call BIS_fnc_admin) > 0) then {
     [] call compile preProcessFilelineNumbers "module_chatIntercept\config.sqf";
     [] call compile preProcessFilelineNumbers "module_chatIntercept\commands.sqf";
