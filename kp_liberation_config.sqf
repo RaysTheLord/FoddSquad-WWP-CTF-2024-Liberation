@@ -707,7 +707,8 @@ KPLIB_transportConfigs = [
     ["uns_m37b1", -5, [0,-1.8,0.15]],
     ["uns_nvatruck_mg", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
     ["uns_nvatruck_open", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
-    ["uns_nvatruck", -5, [0,-1.05,0.8], [0,-2.75,0.8]]
+    ["uns_nvatruck", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
+    ["CUP_O_Hilux_unarmed_TK_INS", -5, [0,-1.2,0.3], [0,-2.75,0.8]]
 ];
 
 /* Various other settings.
