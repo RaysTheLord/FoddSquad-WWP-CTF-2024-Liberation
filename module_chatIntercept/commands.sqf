@@ -26,20 +26,16 @@ pvpfw_chatIntercept_allCommands = [
                 [KP_liberation_fuel_crate, _resources] call KPLIB_fnc_createCrate;
                 systemChat "Supply, ammo, and fuel dropped.";
             };
-            if (_amnt > 10 && _amnt < 15) then {
-                //Medical Supply Drop
-                _pos = getPos player;
-                _holder = createvehicle ["CargoNet_01_box_F", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
-                [objNull, _holder] call BIS_fnc_curatorobjectedited;
-                
-                _holder addItemCargoGlobal ["ACE_fieldDressing", (count allPlayers) * 20];
-                _holder addItemCargoGlobal ["ACE_bloodIV", (count allPlayers) * 1];
-                _holder addItemCargoGlobal ["ACE_morphine", (count allPlayers) * 4];
-                _holder addItemCargoGlobal ["ACE_tourniquet", (count allPlayers) * 2];
-                _holder addItemCargoGlobal ["ACE_personalAidKit", 4];
-                systemChat "Medical crate dropped.";
+            if (_amnt > 10 && _amnt <= 15) then {
+                //Rep changes
+                [2 * _amnt, false] remoteExec ["F_cr_changeCR", 2];
+                combat_readiness = combat_readiness - (2 * _amnt) max 0;
+                if (!isServer) then {
+                    publicVariableServer "combat_readiness";
+                };
+                systemChat "Awareness and civilian reputation assuaged.";
             };
-            if (_amnt >= 15 && _amnt < 30) then {
+            if (_amnt > 15 && _amnt < 30) then {
                 //APC Drop
                 _pos = getPos player;
                 _holder = createvehicle ["CFP_B_USARMY_1991_M113A3_Des_01", [_pos select 0, _pos select 1, 75], [], 0, "CAN_COLLIDE"];
